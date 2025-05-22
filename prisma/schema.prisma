@@ -10,11 +10,28 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+model ChatMessage {
+    id         Int        @id @default(autoincrement())
+    content    String
+    senderType SenderType @default(USER)
+    userEmail  String
+    threadId   String
+    createdAt  DateTime   @default(now())
+    updatedAt  DateTime   @updatedAt
 
-    @@index([name])
+    @@index([userEmail, threadId, createdAt])
+}
+
+model ChatWidgetToken {
+    id            Int      @id @default(autoincrement())
+    token         String
+    allowedDomain String
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
+}
+
+enum SenderType {
+    USER
+    BOT
+    SYSTEM
 }
