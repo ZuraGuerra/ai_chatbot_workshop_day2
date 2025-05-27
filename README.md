@@ -1,29 +1,79 @@
-# Create T3 App
+# EBAC T3 Stack Chatbot Workshop - Day 1 Code
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a [T3 Stack](https://create.t3.gg/) project demonstrating how to build an AI-powered chatbot integrated with [Plomb](https://plomb.ai). Built with TypeScript and modern web technologies.
 
-## What's next? How do I make an app with this?
+## Prerequisites
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- Node.js
+- [Plomb](https://plomb.ai) account
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Getting Started
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+First, set up your development environment:
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Set up your database:
+```bash
+npx prisma db push
+npx prisma generate
+```
+
+4. Configure environment variables (only required for Day 2):
+```bash
+PLOMB_WORKFLOW_URL=your_plomb_workflow_url
+PLOMB_AUTH_TOKEN=your_plomb_token
+```
+
+5. Start the development server:
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the result.
+
+## Tech Stack
+
+This project uses:
+
+- [Next.js](https://nextjs.org) - React framework
+- [Prisma](https://prisma.io) - Database ORM
+- [SQLite](https://www.sqlite.org) - Database
+- [Tailwind CSS](https://tailwindcss.com) - Styling
+- [tRPC](https://trpc.io) - Type-safe APIs
+- [Plomb](https://plomb.ai) - AI Integration
+
+## Database Configuration
+
+This project uses SQLite for simplicity. The database file is located at `prisma/db.sqlite`.
+
+To modify your database schema:
+1. Edit `prisma/schema.prisma`
+2. Run `npx prisma db push`
+3. Run `npx prisma generate`
+
+## Plomb.ai Setup (only required for Day 2)
+
+1. Sign up at [Plomb.ai](https://plomb.ai)
+2. Configure your workflow for chatbot functionality
+3. Set up environment variables with your Plomb credentials
 
 ## Learn More
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+To understand the T3 Stack better:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- [T3 Stack Documentation](https://create.t3.gg/)
+- [Plomb Website](https://plomb.ai)
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Important Notes
 
-## How do I deploy this?
+- This is a demo project for educational purposes
+- You must have a compatible Plomb workflow before running the application (only for Day 2)
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Support
+
+For questions about this demo, please open an issue.
