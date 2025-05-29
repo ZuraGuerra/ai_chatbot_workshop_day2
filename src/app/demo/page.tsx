@@ -32,16 +32,14 @@ export default function DemoPage() {
             <div className="mb-4 h-48 overflow-hidden rounded-lg bg-gray-200">
               <img
                 src="https://cdn.shopify.com/s/files/1/0627/5740/4909/files/what-are-sneakers.png?width=750"
-                alt="Zapatillas"
+                alt="Tenis"
                 className="h-full w-full object-cover"
               />
             </div>
-            <h3 className="mb-2 text-xl font-semibold">
-              Zapatillas Deportivas
-            </h3>
+            <h3 className="mb-2 text-xl font-semibold">Tenis deportivos</h3>
             <p className="mb-2 text-gray-600">
-              Colección exclusiva de zapatillas deportivas para running y
-              training. Disponible en varios colores.
+              Colección exclusiva de tenis deportivos para running y training.
+              Disponible en varios colores.
             </p>
             <p className="font-semibold text-blue-600">$89.99</p>
           </div>

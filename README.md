@@ -1,4 +1,4 @@
-# EBAC T3 Stack Chatbot Workshop - Day 1 Code
+# EBAC T3 Stack Chatbot Workshop - Day 2 Code
 
 This is a [T3 Stack](https://create.t3.gg/) project demonstrating how to build an AI-powered chatbot integrated with [Plomb](https://plomb.ai). Built with TypeScript and modern web technologies.
 
@@ -23,13 +23,13 @@ npx prisma db push
 npx prisma generate
 ```
 
-4. Configure environment variables (only required for Day 2):
+1. Configure environment variables:
 ```bash
 PLOMB_WORKFLOW_URL=your_plomb_workflow_url
-PLOMB_AUTH_TOKEN=your_plomb_token
+PLOMB_API_KEY=your_plomb_token
 ```
 
-5. Start the development server:
+1. Start the development server:
 ```bash
 npm run dev
 ```
@@ -56,7 +56,7 @@ To modify your database schema:
 2. Run `npx prisma db push`
 3. Run `npx prisma generate`
 
-## Plomb.ai Setup (only required for Day 2)
+## Plomb.ai Setup
 
 1. Sign up at [Plomb.ai](https://plomb.ai)
 2. Configure your workflow for chatbot functionality
@@ -72,7 +72,7 @@ To understand the T3 Stack better:
 ## Important Notes
 
 - This is a demo project for educational purposes
-- You must have a compatible Plomb workflow before running the application (only for Day 2)
+- You must have a compatible Plomb workflow before running the application
 
 ## Support
 
